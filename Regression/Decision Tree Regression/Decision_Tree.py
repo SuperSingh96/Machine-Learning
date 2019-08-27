@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-datasets=pd.read_csv("D:\\ML\\Decision Tree\\Position_Salaries.csv")
+datasets=pd.read_csv("D:\\ML\\Decision Tree Regression\\Position_Salaries.csv")
 X=datasets.iloc[:,1:2].values
 Y=datasets.iloc[:,2].values
 
