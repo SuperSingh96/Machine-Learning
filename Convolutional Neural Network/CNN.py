@@ -57,9 +57,11 @@ import numpy as np
 from keras.preprocessing import image
 test_image1 = image.load_img('C:\\Users\\Navnit Singh\\Desktop\\cat.jpg', target_size = (64, 64))
 test_image1 = image.img_to_array(test_image1)
+test_image1=test_image1/255
 test_image1 = np.expand_dims(test_image1, axis = 0)
 result1 = classifier.predict(test_image1)
 training_set.class_indices
+result1[0][0]=(result1[0][0]>0.5)
 if result1[0][0] == 1:
     pred = 'dog'
 else:
